@@ -1,19 +1,19 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
-// declare data types of ShoppingCartProvider's props i.e. children
+// Declare data types of ShoppingCartProvider's props i.e. children
 type ShoppingCartProviderProps = {
     children: ReactNode
 }
 
-// declare data types of cart items
-// id number leads to other items' details like name and price
-// quantity number can be multiplied with assigned item's price to know the total resulting price
+// Declare data types of cart items
+// Id number leads to other items' details like name and price
+// Quantity number can be multiplied with assigned item's price to know the total resulting price
 type CartItem = {
     id: number
     quantity: number
 }
 
-// declare data types of ShoppingCartContext functions
+// Declare data types of ShoppingCartContext functions
 // "addToCart" is not added as part of the functions because "increaseCartQuantity" does the same job
 type ShoppingCartContext = {
     getItemQuantity: (id: number) => number
@@ -29,10 +29,15 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
-    // store state of cart items
+    // Store state of cart items
     const [ cartItems, setCartItems ] = useState<CartItem[]>([])
     
-    // create functions that will increment, decrement etc. cart items
+    // Create functions that will increment, decrement etc. cart items' values
+    function getItemQuantity(id: number) {
+
+        // Find the current cart items with the id, where the item.id === id 
+        // If that value is true, return quantity, otherwise return a default value of 0
+    } 
 
     return (
         <ShoppingCartContext.Provider value={{}}>
