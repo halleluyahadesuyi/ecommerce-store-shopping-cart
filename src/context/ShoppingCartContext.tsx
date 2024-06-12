@@ -37,10 +37,11 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
         // Find the current cart items with the id, where the item.id === id 
         // If that value is true, return quantity, otherwise return a default value of 0
+        return cartItems.find(item => item.id === id)?.quantity || 0
     } 
 
     return (
-        <ShoppingCartContext.Provider value={{}}>
+        <ShoppingCartContext.Provider value={{ getItemQuantity }}>
             {children}
         </ShoppingCartContext.Provider>
     )
