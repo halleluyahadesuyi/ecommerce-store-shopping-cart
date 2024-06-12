@@ -80,7 +80,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
     }
 
-    
+    function removeFromCart(id: number) {
+        setCartItems(currItems => {
+            // Filter out items whose id is not equal to the current item's id
+            return currItems.filter(item => item.id !== id)
+        })
+    }
 
     return (
         <ShoppingCartContext.Provider value={{ getItemQuantity, increaseCartQuantity, decreaseCartQuantity }}>
