@@ -62,7 +62,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     function decreaseCartQuantity(id: number) {
         setCartItems(currItems => {
             // If item quantity equals 1, remove it
-            if(currItems.find(item => item.id === id) == null) {
+            if(currItems.find(item => item.id === id)?.quantity === 1) {
                 // Return a new list of all current items, remove whichever one whose id was passed
                 // If an id is passed for an item that doesn't exist, the same current list would still be returned 
                 return currItems.filter(item => item.id !== id)
@@ -79,6 +79,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             }
         })
     }
+
+    
 
     return (
         <ShoppingCartContext.Provider value={{ getItemQuantity, increaseCartQuantity, decreaseCartQuantity }}>
