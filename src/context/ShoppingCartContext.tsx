@@ -30,15 +30,34 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     // Store state of cart items
-    const [ cartItems, setCartItems ] = useState<CartItem[]>([])
-    
-    // Create functions that will increment, decrement etc. cart items' values
-    function getItemQuantity(id: number) {
+    const [cartItems, setCartItems] = useState<CartItem[]>([])
 
+    // Create functions that will increment, decrement etc. cart items' values
+
+    function getItemQuantity(id: number) {
         // Find the current cart items with the id, where the item.id === id 
         // If that value is true, return quantity, otherwise return a default value of 0
         return cartItems.find(item => item.id === id)?.quantity || 0
-    } 
+    }
+
+    function increaseCartQuantity(id: number) {
+        setCartItems(currItems => {
+            // If an item can't be found in the cart, add a new item for it
+            if(currItems.find(item => item.id === id) == null) {
+                return [...currItems, { id, quantity: 1 }]
+            } else {
+            // Otherwise, if the item exists, keep everything the same, but increment the quantity by 1
+                return currItems.map(item => {
+                    if (item.id === id) {
+                        return { ...item, quantity: item.quantity + 1 }
+                    } else {
+                        // Otherwise, return the item without any changes
+                        return item
+                    }
+                })
+            }
+        })
+    }
 
     return (
         <ShoppingCartContext.Provider value={{ getItemQuantity }}>
