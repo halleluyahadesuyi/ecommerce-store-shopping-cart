@@ -13,13 +13,17 @@ type CartItem = {
   quantity: number;
 };
 
-// Declare data types of ShoppingCartContext functions
+// Declare data types of ShoppingCartContext functions etc.
 // "addToCart" is not added as part of the functions because "increaseCartQuantity" does the same job
 type ShoppingCartContext = {
+  openCart: () => void;
+  closeCart: () => void;
   getItemQuantity: (id: number) => number;
   increaseCartQuantity: (id: number) => void;
   decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
+  cartQuantity: number;
+  cartItems: CartItem[];
 };
 
 const ShoppingCartContext = createContext({} as ShoppingCartContext);
@@ -94,6 +98,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        cartItems
       }}
     >
       {children}
