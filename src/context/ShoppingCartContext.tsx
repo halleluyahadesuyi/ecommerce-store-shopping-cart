@@ -36,6 +36,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   // Store state of cart items
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
+  // Count all the quantities of Each item in the cart and return a total value
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  )
+
   // Create functions that will increment, decrement etc. cart items' values
 
   function getItemQuantity(id: number) {
@@ -98,7 +104,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
-        cartItems
+        cartItems,
+        cartQuantity,
       }}
     >
       {children}
