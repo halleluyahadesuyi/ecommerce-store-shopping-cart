@@ -110,6 +110,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        openCart,
+        closeCart,
         cartItems,
         cartQuantity,
       }}
