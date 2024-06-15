@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from "react";
+import { ShoppingCart } from "../components/ShoppingCart";
 
 // Declare data types of ShoppingCartProvider's props i.e. children
 type ShoppingCartProviderProps = {
@@ -117,6 +118,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
       }}
     >
       {children}
+      <ShoppingCart />
     </ShoppingCartContext.Provider>
   );
 }
