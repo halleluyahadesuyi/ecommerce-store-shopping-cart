@@ -35,7 +35,7 @@ export function useShoppingCart() {
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   // State variable to open and close cart
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   // Store state of cart items
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -44,10 +44,10 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
     0
-  )
+  );
 
-  const openCart = () => setIsOpen(true)
-  const closeCart = () => setIsOpen(false)
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   // Create functions that will increment, decrement etc. cart items' values
 
