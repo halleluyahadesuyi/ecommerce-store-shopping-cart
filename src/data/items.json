@@ -22,5 +22,17 @@
       "name": "Car",
       "price": 14000,
       "imgUrl": "/imgs/car.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sweater & Shoes",
+      "price": 80,
+      "imgUrl": "/imgs/sweater.jpg"
+    },
+    {
+      "id": 6,
+      "name": "K-Swiss Sneakers",
+      "price": 120,
+      "imgUrl": "/imgs/shoes.jpg"
     }
   ]
