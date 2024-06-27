@@ -15,7 +15,7 @@ export function Home() {
         </div>
       </div>
 
-      <Container className="bg-light text-dark p-5 border border-4 border-info rounded-pill">
+      <Container className="bg-light text-dark p-5 border border-5 border-info rounded-pill">
         <h2 className="text-center mb-4">Why Shop With Us?</h2>
         <p className="text-center">
           Discover a vast range of products carefully curated to meet your needs
