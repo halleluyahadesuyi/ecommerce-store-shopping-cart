@@ -30,7 +30,7 @@ export function Home() {
 
       <Container fluid className="bg-light text-dark text-center py-3">
         <p>
-          &copy; Halleluyah Adesuyi, 2024 E-Commerce Store. All rights reserved.
+          &copy; 2024 E-Commerce Store | Halleluyah Adesuyi
         </p>
       </Container>
     </Container>
