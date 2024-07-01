@@ -2,6 +2,7 @@ import { Navbar as NavbarBs, Container, Nav, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 import logo from '../assets/logo-dark.png';
+import "../App.css"
 
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
