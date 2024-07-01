@@ -15,7 +15,7 @@ export function Navbar() {
         <NavbarBs.Toggle aria-controls="navbar-nav" />
         <NavbarBs.Collapse id="navbar-nav">
           <Nav className="me-auto fw-bold fs-5">
-            <Nav.Link to="/" as={NavLink} className="px-5">
+            <Nav.Link to="/" as={NavLink} className="pe-5">
               Home
             </Nav.Link>
             <Nav.Link to="/store" as={NavLink} className="pe-5">
@@ -28,7 +28,7 @@ export function Navbar() {
           <Button
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
-            variant="outline-primary"
+            variant="outline-dark"
             className="rounded-circle"
           >
             <svg
