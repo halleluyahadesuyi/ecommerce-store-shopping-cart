@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
+import coverImage from "../assets/cover.jpg";
 import "../App.css";
 
 export function Home() {
   return (
     <Container className="bg-dark text-light">
-      <div className="landing-cover rounded">
-        <div className="cover-text text-center text-white">
-          <h1>Welcome to Our E-Commerce Store</h1>
-          <p>Your one-stop shop for all your needs</p>
-          <Link to="/store">
-            <Button variant="primary">Shop Now</Button>
-          </Link>
-        </div>
+      <img
+        src={coverImage}
+        alt="cover-image"
+        className="landing-cover rounded"
+      />
+      <div className="cover-text text-center text-white">
+        <h1>Welcome to Our E-Commerce Store</h1>
+        <p>Your one-stop shop for all your needs</p>
+        <Link to="/store">
+          <Button variant="primary">Shop Now</Button>
+        </Link>
       </div>
 
       <Container className="bg-light text-dark p-5 border border-5 border-info rounded-pill">
