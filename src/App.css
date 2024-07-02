@@ -1,3 +1,4 @@
+/* Homepage image background  */
 .landing-cover {
   background: url("/imgs/cover.jpg") no-repeat center center;
   background-size: cover;
@@ -8,6 +9,7 @@
   position: relative;
 }
 
+/* Homepage welcome-text background */
 .cover-text {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -16,7 +18,7 @@
 
 /* Navbar item hover and active states */
 .navbar-nav .nav-link {
-  color: #000; /* Default color */
+  color: #a5069a; /* Default color */
   transition: color 0.3s;
 }
 
