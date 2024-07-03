@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
+import ProgressiveImage from "../components/ProgressiveImageLoading";
 import coverImage from "../assets/cover.jpg";
 import "../App.css";
 
 export function Home() {
   return (
     <Container className="bg-dark text-light">
-      <img
+      <ProgressiveImage
         src={coverImage}
-        alt="cover-image"
+        placeholderSrc={coverImage}
+        alt="landing page cover"
         className="landing-cover rounded"
       />
       <div className="cover-text text-center text-white">

@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
+import ProgressiveImage from "../components/ProgressiveImageLoading";
 import ceo from "../assets/ceo.jpg";
 import cto from "../assets/cto.jpg";
 import marketer from "../assets/marketer.jpg";
@@ -37,7 +38,12 @@ export function About() {
       <Row>
         <Col md={4}>
           <Card className="mb-4 shadow-sm">
-            <Card.Img variant="top" src={ceo} />
+            <ProgressiveImage
+              src={ceo}
+              placeholderSrc={ceo}
+              alt="ceo"
+              className="card-img-top" /* Bootstrap utility class; makes image fit well within card's layout (or border radius) */
+            />
             <Card.Body className="text-center">
               <Card.Title>Marie Johnson</Card.Title>
               <Card.Text>CEO & Founder</Card.Text>
@@ -46,7 +52,12 @@ export function About() {
         </Col>
         <Col md={4}>
           <Card className="mb-4 shadow-sm">
-            <Card.Img variant="top" src={cto} />
+            <ProgressiveImage
+              src={cto}
+              placeholderSrc={cto}
+              alt="cto"
+              className="card-img-top"
+            />
             <Card.Body className="text-center">
               <Card.Title>James Bond</Card.Title>
               <Card.Text>Chief Technology Officer</Card.Text>
@@ -55,9 +66,14 @@ export function About() {
         </Col>
         <Col md={4}>
           <Card className="mb-4 shadow-sm">
-            <Card.Img variant="top" src={marketer} />
+            <ProgressiveImage
+              src={marketer}
+              placeholderSrc={marketer}
+              alt="marketer"
+              className="card-img-top"
+            />
             <Card.Body className="text-center">
-              <Card.Title>Will Carter</Card.Title>
+              <Card.Title>Cynthia Carter</Card.Title>
               <Card.Text>Head of Marketing</Card.Text>
             </Card.Body>
           </Card>

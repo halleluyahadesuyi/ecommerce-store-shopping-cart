@@ -1,4 +1,4 @@
-/* Homepage image background  */
+/* --- Homepage image background --- */
 .landing-cover {
   /* background: url("/imgs/cover.jpg") no-repeat center center; */
   /* background-repeat: no-repeat;
@@ -14,7 +14,7 @@
   position: relative; */
 }
 
-/* Homepage welcome-text background */
+/* --- Homepage welcome-text background --- */
 .cover-text {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -26,7 +26,7 @@
   transform: translate(-50%, -50%);
 }
 
-/* Navbar item hover and active states */
+/* --- Navbar item hover and active states --- */
 .navbar-nav .nav-link {
   color: #a5069a; /* Default color */
   transition: color 0.3s;
@@ -36,4 +36,22 @@
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link.active {
   color: #007bff; /* Color on hover, focus, and active */
+}
+
+/* --- Store items' images --- */
+.store-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* --- Progressive image loading --- */
+/* Apply a blur effect to the image while loading */
+.loading {
+  filter: blur(10px);
+}
+
+/* Apply transition effect for loaded images */
+.loaded {
+  filter: blur(0px);
+  transition: filter 0.2s ease-in-out;
 }
